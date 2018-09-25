@@ -14,7 +14,11 @@
 
     <link href="{{ STATIC_URL }}assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ STATIC_URL }}assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}assets/websites/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}assets/websites/css/header.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}assets/websites/css/footer.css" rel="stylesheet" type="text/css" />
+
+    
+
 
     <title>{% block title %}{% endblock title %}</title>
     
@@ -25,6 +29,14 @@
     <script src = "{{ STATIC_URL }}assets/js/bootstrap.min.js"></script>
 
     {% block extrascript %}{% endblock %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1&appId=1921249998131487&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 </head>
 

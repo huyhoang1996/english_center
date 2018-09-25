@@ -1,0 +1,33 @@
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+.none-color{
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-size: 18px;
+}
+.header-top{
+	margin-top: 10px;
+}
+@media (max-width: 640px) {
+
+	.logo{
+		display: none;
+	}
+	.name-page{
+		font-size: 25px;
+    	margin-top: 10px;
+	}
+	.none-color{
+		background-color: #f8f8f8;
+    	border-color: #e7e7e7;
+	}
+}
