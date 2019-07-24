@@ -26,7 +26,8 @@ def home(request):
     from phonenumbers.phonenumberutil import country_code_for_region
     phone_code = country_code_for_region(geo['country_code'])
     print 'phone_code ', phone_code
-    return render(request, 'websites/home.html')
+    result = {'ip': ip, 'geo': geo, 'phone_code': phone_code}
+    return render(request, 'websites/home.html', result)
     # except Exception, e:
     #     print "Error: ", e
     #     raise Exception( "ERROR : Internal Server Error .Please contact administrator.")
