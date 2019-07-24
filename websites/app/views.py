@@ -15,8 +15,17 @@ def get_client_ip(request):
 def home(request):
     print "***START Power Card Introduction PAGE***"
     # try:
-    print 'ipppp ', get_client_ip(request)
+    ip =  get_client_ip(request)
+    print 'ipppp ', ip
 
+    from django.contrib.gis.geoip2 import GeoIP2
+    g = GeoIP2()
+    geo = g.country(str(ip))
+    print 'geo ', geo
+
+    from phonenumbers.phonenumberutil import country_code_for_region
+    phone_code = country_code_for_region(geo['country_code'])
+    print 'phone_code ', phone_code
     return render(request, 'websites/home.html')
     # except Exception, e:
     #     print "Error: ", e
