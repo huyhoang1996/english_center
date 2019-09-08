@@ -131,4 +131,4 @@ STATICFILES_DIRS = (
 )
 
 
-from config.setting_local import *
+# from config.setting_local import *

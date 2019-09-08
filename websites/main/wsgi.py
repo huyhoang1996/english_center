@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
-os.environ['DJANGO_SETTINGS_MODULE'] = 'main.settings'
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "main.settings")
+os.environ['DJANGO_SETTINGS_MODULE'] = 'config.setting_production'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.setting_production")
 
 application = get_wsgi_application()
