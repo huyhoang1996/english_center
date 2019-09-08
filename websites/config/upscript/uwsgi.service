@@ -1,0 +1,15 @@
+#/etc/systemd/system/uwsgi.service
+[Unit]
+Description=uWSGI Emperor service
+After=syslog.target
+
+[Service]
+ExecStart=/home/django_env/english_center_env/bin/uwsgi --emperor /etc/uwsgi/apps-enabled
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
