@@ -1,4 +1,4 @@
-from settings import *
+from main.settings import *
 
 # websites/manage.py runserver --settings=config.local
 print '>>>>>>>>> DEPLOY IN LOCAL'
